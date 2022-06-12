@@ -8,12 +8,23 @@
     <title>Document</title>
     <style>
     *{margin: 0;padding: 0;box-sizing: border-box;}
+
+    :root {
+        --button-height: 32px;
+        --font-size: 14px;
+        --button-color: rgb(104, 137, 238);
+        --button-color-hover: white;
+        --button-color-active: rgb(213, 221, 246);
+        --border-radius: 10px;
+    }
     </style>
 </head>
 <body>
 <div id="app">
-    <l-button></l-button>
+    <l-button @click="test">测试</l-button>
+    <l-button :loading="loading" @click="loading = !loading" icon="setting">按钮</l-button>
 </div>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_2745341_wdidogz81l.js"></script>
 </body>
 </html>
