@@ -2,7 +2,7 @@
   <div style="box-sizing:content-box">
     <div class="active" :class="value ? 'activeclose' : 'activeopen'" @click="$emit('click')" :style="{ backgroundColor: value ? inactiveColor : activeColor }">
       <div class="active-g" :class="value ? 'activeclose-g' : 'activeopen-g'"></div>
-      <span>{{ value ? title.split("|")[0] : title.split("|")[1] }}</span>
+      <span>{{ value ? title.split("|")[1] : title.split("|")[0] }}</span>
     </div>
   </div>
 </template>
@@ -19,29 +19,27 @@ export default {
     },
     activeColor: {
       type: String,
-      default: "#ff0000",
     },
     inactiveColor: {
       type: String,
-      default: "#306ecc",
     },
   },
   watch: {
     title: {
       handler(val) {
-        console.log(val);
+        // console.log(val);
       },
       immediate: true,
     },
     activeColor: {
       handler(val) {
-        console.log(val);
+        // console.log(val);
       },
       immediate: true,
     },
     inactiveColor: {
       handler(val) {
-        console.log(val);
+        // console.log(val);
       },
       immediate: true,
     },
@@ -76,11 +74,11 @@ export default {
   }
 }
 .activeclose {
-  background: #306ecc;
+  background: #ff0000;
   text-align: right;
 }
 .activeopen {
-  background: #ff0000;
+  background: #306ecc;
   text-align: left;
 }
 .active-g {

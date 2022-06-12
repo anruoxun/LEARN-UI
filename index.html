@@ -1,30 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    *{margin: 0;padding: 0;box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    :root {
-        --button-height: 32px;
-        --font-size: 14px;
-        --button-color: rgb(104, 137, 238);
-        --button-color-hover: white;
-        --button-color-active: rgb(213, 221, 246);
-        --border-radius: 10px;
-    }
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-color: rgb(104, 137, 238);
+            --button-color-hover: white;
+            --button-color-active: rgb(213, 221, 246);
+            --border-radius: 10px;
+        }
     </style>
 </head>
+
 <body>
 <div id="app">
-    <l-button @click="test">测试</l-button>
-    <l-button :loading="loading" @click="loading = !loading" icon="setting">按钮</l-button>
+    <l-button :loading="loading1" @click="loading1 = !loading1">按钮</l-button>
+    <l-button :loading="loading2" @click="loading2 = !loading2" icon="setting">按钮</l-button>
+    <l-button :loading="loading3" @click="loading3 = !loading3" icon="setting" icon-position="right">按钮</l-button>
+    <l-button-group>
+        <l-button icon="arrow-left-bold">上一页</l-button>
+        <l-button>中间</l-button>
+        <l-button icon="arrow-right-bold" icon-position="right">下一页</l-button>
+    </l-button-group>
+    <div style="width: 55px;">
+        <l-switch :value="switchVal" @click="switchBtn()"></l-switch>
+        <l-switch inactive-color="orange" :value="switchVal2" title="是|否" @click="switchBtn2()"></l-switch>
+    </div>
+    <div id="test"></div>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_2745341_wdidogz81l.js"></script>
 </body>
+
 </html>
