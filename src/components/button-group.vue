@@ -1,17 +1,17 @@
 <template>
-  <div class="l-button-group">
+  <div class="yl-button-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "lButtonGroup",
+  name: "ylButtonGroup",
   mounted() {
     for (let node of this.$el.children) {
       let name = node.nodeName.toLowerCase();
       if (name !== "button") {
-        console.warn(`l-utton-group 的子元素应该全是l-button，但是你写的是${name}`);
+        console.warn(`yl-button-group 的子元素应该全是yl-button，但是你写的是${name}`);
       }
     }
   },
@@ -19,10 +19,10 @@ export default {
 </script>
 
 <style lang="scss">
-.l-button-group {
+.yl-button-group {
   display: inline-flex;
   vertical-align: middle;
-  > .l-button {
+  > .yl-button {
     border-radius: 0;
     margin-left: -1px;
     &:first-child {

@@ -1,7 +1,7 @@
 <template>
-  <button class="l-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
-    <l-icon v-if="loading" class="loading" name="loading"></l-icon>
-    <l-icon v-if="icon && !loading" :name="icon"></l-icon>
+  <button class="yl-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
+    <yl-icon v-if="loading" class="loading" name="loading"></yl-icon>
+    <yl-icon v-if="icon && !loading" :name="icon"></yl-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import lIcon from "./icon";
+import ylIcon from "./icon";
 export default {
-  name: "lButton",
+  name: "ylButton",
   components: {
-    lIcon,
+    ylIcon,
   },
   props: {
     icon: {},
@@ -41,7 +41,7 @@ export default {
     transform: rotate(360deg);
   }
 }
-.l-button {
+.yl-button {
   height: var(--button-height);
   font-size: var(--font-size);
   padding: 0 1em;

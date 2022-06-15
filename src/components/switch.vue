@@ -1,21 +1,22 @@
 <template>
   <div style="box-sizing:content-box">
-    <div class="active" :class="value ? 'activeclose' : 'activeopen'" @click="$emit('click')" :style="{ backgroundColor: value ? inactiveColor : activeColor }">
-      <div class="active-g" :class="value ? 'activeclose-g' : 'activeopen-g'"></div>
+    <div class="yl-switch-active" :class="value ? 'yl-switch-activeclose' : 'yl-switch-activeopen'"
+         @click="$emit('click');" :style="{ backgroundColor: value ? inactiveColor : activeColor }">
+      <div class="yl-switch-active-g" :class="value ? 'yl-switch-activeclose-g' : 'yl-switch-activeopen-g'"></div>
       <span>{{ value ? title.split("|")[1] : title.split("|")[0] }}</span>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "lSwitch",
+  name: "ylSwitch",
   props: {
     value: {
       default: false,
     },
     title: {
       type: String,
-      default: "√|×",
+      default: "是|否",
     },
     activeColor: {
       type: String,
@@ -43,15 +44,11 @@ export default {
       },
       immediate: true,
     },
-  },
-  data() {
-    return {};
-  },
-  created() {},
+  }
 };
 </script>
-<style scope lang="scss">
-.active {
+<style lang="scss">
+.yl-switch-active {
   min-height: 25px;
   min-width: 50px;
   border-radius: 50px;
@@ -63,6 +60,7 @@ export default {
   color: white;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0);
+
   span {
     width: 100%;
     word-break: break-all;
@@ -73,15 +71,18 @@ export default {
     overflow: hidden;
   }
 }
-.activeclose {
+
+.yl-switch-activeclose {
   background: #ff0000;
   text-align: right;
 }
-.activeopen {
+
+.yl-switch-activeopen {
   background: #306ecc;
   text-align: left;
 }
-.active-g {
+
+.yl-switch-active-g {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -90,10 +91,12 @@ export default {
   box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 5%), 0 2px 2px 0 rgba(0, 0, 0, 10%), 0 3px 3px 0 rgba(0, 0, 0, 5%);
   transition: left 0.3s;
 }
-.activeclose-g {
+
+.yl-switch-activeclose-g {
   left: 0;
 }
-.activeopen-g {
+
+.yl-switch-activeopen-g {
   left: calc(100% - 25px);
 }
 </style>

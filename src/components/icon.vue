@@ -2,11 +2,12 @@
   <svg class="icon">
     <use :xlink:href="`#icon-${name}`"></use>
   </svg>
+<!--  <i class="icon" :class="`icon-${name}`"></i>-->
 </template>
 
 <script>
 export default {
-  name: "lIcon",
+  name: "ylIcon",
   props: {
     name: {
       type: String,
