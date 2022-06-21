@@ -1,6 +1,6 @@
-# LEARN-UI
+# LEARN-UI 一个Vue的UI组件
 
-一个Vue的UI组件
+[![Build Status](https://app.travis-ci.com/anruoxun/LEARN-UI.svg?branch=master)](https://app.travis-ci.com/anruoxun/LEARN-UI)
 
 ## 介绍
 
