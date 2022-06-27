@@ -81,6 +81,21 @@
         <yl-col span="24">2</yl-col>
         <yl-col span="24">3</yl-col>
     </yl-row>
+    <yl-layout style="height: 500px;border: 1px solid red;">
+        <yl-header style="height: 60px">header</yl-header>
+        <yl-layout>
+            <yl-sider style="background: red;">sider</yl-sider>
+            <yl-main style="background: rebeccapurple;text-align: center">main</yl-main>
+        </yl-layout>
+        <yl-footer style="height: 60px">footer</yl-footer>
+    </yl-layout>
+    <div style="display: flex;flex-wrap: wrap;flex-direction: row;align-items: baseline;">
+        <div style="line-height: 20px;flex-grow:1;flex-shrink: 0;width: 50px;height: 50px;background: red;text-align: center">1</div>
+        <div style="line-height: 30px;flex-grow:3;flex-shrink: 2;width: 50px;height: 50px;background: red;text-align: center">2</div>
+        <div style="line-height: 40px;flex-grow:1;flex-shrink: 1;width: 50px;height: 50px;background: red;text-align: center">3</div>
+        <div style="line-height: 30px;flex-grow:1;flex-shrink: 1;width: 50px;height: 50px;background: red;text-align: center">4</div>
+        <div style="line-height: 20px;flex-grow:1;flex-shrink: 1;width: 50px;height: 50px;background: red;text-align: center">5</div>
+    </div>
     <div id="test"></div>
 </div>
 <script src="./src/app.js"></script>

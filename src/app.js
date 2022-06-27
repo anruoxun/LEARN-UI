@@ -4,8 +4,13 @@ import Icon from "./components/icon.vue"
 import ButtonGroup from "./components/button-group.vue"
 import Switch from "./components/switch.vue"
 import Input from "./components/input.vue"
-import Row from "./components/Row.vue"
-import Col from "./components/Col.vue"
+import Row from "./components/row.vue"
+import Col from "./components/col.vue"
+import Layout from './components/layout.vue'
+import Header from './components/header.vue'
+import Sider from './components/sider.vue'
+import Main from './components/main.vue'
+import Footer from './components/footer.vue'
 
 Vue.component('yl-button', Button)
 Vue.component('yl-icon', Icon)
@@ -14,6 +19,11 @@ Vue.component('yl-switch', Switch)
 Vue.component('yl-input', Input)
 Vue.component('yl-row', Row)
 Vue.component('yl-col', Col)
+Vue.component('yl-layout', Layout)
+Vue.component('yl-header', Header)
+Vue.component('yl-sider', Sider)
+Vue.component('yl-main', Main)
+Vue.component('yl-footer', Footer)
 
 new Vue({
   el: "#app",
